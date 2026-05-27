@@ -7,36 +7,100 @@
   <style>
     body { font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.7; }
     h1 { color: #e91e8c; }
-    h2 { margin-top: 28px; font-size: 16px; }
+    h2 { margin-top: 28px; font-size: 16px; color: #c2185b; }
     p  { font-size: 14px; }
+    ul { font-size: 14px; padding-left: 20px; }
+    li { margin-bottom: 4px; }
+    .highlight { background: #fff0f6; border-left: 4px solid #e91e8c; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+    .note { background: #f5f5f5; border-left: 4px solid #999; padding: 10px 16px; border-radius: 4px; margin: 12px 0; font-size: 13px; color: #555; }
   </style>
 </head>
 <body>
   <h1>💌 Entirenity — Privacy Policy</h1>
-  <p><em>Last updated: April 2026</em></p>
+  <p><em>Last updated: May 2026</em></p>
 
   <h2>1. Information We Collect</h2>
-  <p>When you use Entirenity, we collect your Google account name, email, and profile photo (for login), your chosen username, messages and media you send, approximate last-seen time, and your device token for push notifications via OneSignal.</p>
+  <p>When you use Entirenity, we collect:</p>
+  <ul>
+    <li>Your Google account name, email, and profile photo (for login)</li>
+    <li>Username you choose</li>
+    <li>Messages you send (stored securely in Firebase)</li>
+    <li>Voice messages, photos, and videos you share</li>
+    <li>Approximate last-seen time and online status</li>
+    <li>Device token for push notifications (via OneSignal)</li>
+  </ul>
 
   <h2>2. How We Use Your Information</h2>
-  <p>We use your information only to provide the messaging service, show your profile to connections, deliver push notifications, and maintain your account preferences.</p>
+  <p>We use your information only to:</p>
+  <ul>
+    <li>Provide the messaging service</li>
+    <li>Show your profile to people you connect with</li>
+    <li>Deliver push notifications for new messages</li>
+    <li>Maintain your account preferences</li>
+  </ul>
 
   <h2>3. Data Storage & Security</h2>
   <p>All data is stored on Google Firebase servers with industry-standard security. Messages are protected by Firebase security rules — only the sender and recipient can access their messages. We do not sell, trade, or share your personal data with any third parties.</p>
 
-  <h2>4. Media & Files</h2>
-  <p>Photos, videos, and voice messages are stored on Cloudinary servers. Media is only accessible through secure URLs and is not publicly indexed.</p>
+  <h2>4. End-to-End Encryption for Media</h2>
+  <div class="highlight">
+    <p><strong>Photos and videos shared between users in Entirenity are protected with end-to-end encryption (E2EE).</strong></p>
+  </div>
+  <p><strong>How it works:</strong></p>
+  <ul>
+    <li>Each photo or video is encrypted on your browser/device before being uploaded to our servers</li>
+    <li>A unique AES-256 encryption key is generated for each file</li>
+    <li>This key is further encrypted using RSA-2048 and can only be decrypted by the intended recipient</li>
+    <li>Our servers (including Cloudinary where media is stored) only receive encrypted data and cannot view your photos or videos</li>
+    <li>Only you and your conversation partner can decrypt and view shared media</li>
+  </ul>
+  <p><strong>What this means:</strong></p>
+  <ul>
+    <li>We cannot view your shared photos or videos</li>
+    <li>Even if our storage servers were compromised, your media remains unreadable</li>
+    <li>No third party can intercept and view your media</li>
+  </ul>
+  <div class="note">
+    <strong>Note:</strong> Text messages are stored privately but are not end-to-end encrypted in the current version.
+  </div>
 
-  <h2>5. Push Notifications</h2>
-  <p>We use OneSignal to deliver push notifications. You can disable notifications at any time from your device settings.</p>
+  <h2>5. Media & Files</h2>
+  <p>Photos, videos, and voice messages are stored on Cloudinary servers in encrypted form. Media is only accessible through secure URLs and is not publicly indexed. Due to end-to-end encryption, even Cloudinary cannot access the contents of your shared media.</p>
 
-  <h2>6. Data Retention</h2>
-  <p>Your data is retained as long as your account exists. To delete your account and all associated data, email us at support.entirenity@gmail.com. Data will be permanently deleted within 30 days.</p>
+  <h2>6. Push Notifications</h2>
+  <p>We use OneSignal to deliver push notifications. Your device token is stored to enable notification delivery. You can disable notifications at any time from the Settings screen within the app.</p>
 
-  <h2>7. Children's Privacy</h2>
-  <p>Entirenity is intended for users 18 years of age and older. We do not knowingly collect information from minors.</p>
+  <h2>7. Data Retention</h2>
+  <p>Your data is retained as long as your account exists. You may delete your account at any time directly from the app's Profile screen, after which all your data will be permanently and immediately deleted as described in Section 8.</p>
 
-  <h2>8. Contact Us</h2>
-  <p>For privacy concerns or data deletion: <a href="mailto:support.entirenity@gmail.com">support.entirenity@gmail.com</a></p>
+  <h2>8. Account Deletion</h2>
+  <p>You can delete your account directly from the app:</p>
+  <ul>
+    <li>Open the app → tap <strong>Profile</strong> (bottom navigation)</li>
+    <li>Scroll down and tap <strong>🗑️ Delete Account</strong></li>
+    <li>Confirm the deletion</li>
+  </ul>
+  <p>When you delete your account, the following happens immediately and permanently:</p>
+  <ul>
+    <li>All outgoing and incoming follow requests are deleted</li>
+    <li>Your username reservation is released</li>
+    <li>Your profile is fully anonymized — username, display name, email, photo, and bio are permanently cleared</li>
+    <li>Your locally stored encryption keys are erased from your device</li>
+    <li>Your Firebase authentication account is permanently deleted</li>
+    <li>You are signed out of all sessions</li>
+  </ul>
+  <div class="note">
+    This process is irreversible. Once your account is deleted, your data cannot be recovered. If you shared messages with other users, those message records may persist in their chat history but will no longer be attributed to an identifiable account.
+  </div>
+  <p>Alternatively, you can request account deletion by emailing us at <a href="mailto:support.entirenity@gmail.com">support.entirenity@gmail.com</a> with the subject <strong>"Delete My Account"</strong>.</p>
+
+  <h2>9. Children's Privacy</h2>
+  <p>Entirenity is not intended for users under 18 years of age. We do not knowingly collect information from minors. If you believe a minor has created an account, please contact us immediately.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Changes will be notified through the app. Continued use after changes means you accept the updated policy.</p>
+
+  <h2>11. Contact Us</h2>
+  <p>For any privacy concerns or data deletion requests, contact us at: <a href="mailto:support.entirenity@gmail.com">support.entirenity@gmail.com</a></p>
 </body>
 </html>
