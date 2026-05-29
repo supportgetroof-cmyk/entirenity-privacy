@@ -51,7 +51,7 @@
     <li>Each photo or video is encrypted on your browser/device before being uploaded to our servers</li>
     <li>A unique AES-256 encryption key is generated for each file</li>
     <li>This key is further encrypted using RSA-2048 and can only be decrypted by the intended recipient</li>
-    <li>Our servers (including Cloudinary where media is stored) only receive encrypted data and cannot view your photos or videos</li>
+  <li>Our servers (including Firebase Storage where encrypted media is stored) only receive encrypted data...</li>
     <li>Only you and your conversation partner can decrypt and view shared media</li>
   </ul>
   <p><strong>What this means:</strong></p>
@@ -65,8 +65,8 @@
   </div>
 
   <h2>5. Media & Files</h2>
-  <p>Photos, videos, and voice messages are stored on Cloudinary servers in encrypted form. Media is only accessible through secure URLs and is not publicly indexed. Due to end-to-end encryption, even Cloudinary cannot access the contents of your shared media.</p>
-
+<p>Encrypted photos and videos shared in chats are stored on Firebase Storage (Google) in encrypted form — only the intended recipient can decrypt them. Profile photos are stored on Cloudinary. Voice messages are stored directly in Firebase. All media is accessible only through secure authenticated URLs.</p>
+  
   <h2>6. Push Notifications</h2>
   <p>We use OneSignal to deliver push notifications. Your device token is stored to enable notification delivery. You can disable notifications at any time from the Settings screen within the app.</p>
 
